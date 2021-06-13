@@ -12,7 +12,7 @@ import util.Define;
 public class Report {
 	Academe academe =  Academe.getInstance();
 	public static final String TITLE=" 수강생 보고서 \t\t\n";
-	public static final String HEADER="이름  :  학번  : 과목  :   점수   :    수강료 \n";
+	public static final String HEADER="이름  :  학번  : 필수과목  :   점수   :    수강료 \n";
 	public static final String LINE = "_________________________________________________\n";
 	public static final String LINE2 ="=================================================\n";
 	
@@ -57,7 +57,7 @@ public class Report {
 			buffer.append(student.getStudentId());
 			buffer.append(" : ");
 			buffer.append(student.getStudentSubject().getSubjectName());
-			buffer.append(" :  ");
+			buffer.append(" : ");
 			point= getScoreGrade(student, subject);
 			sumPoint += point;
 			buffer.append(" : ");
